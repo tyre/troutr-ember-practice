@@ -1,0 +1,15 @@
+<h1>Look at the Notes</h1>
+
+<ul>
+  {{#each notes}}
+    {{view TroutrEmber.ShowNoteView noteBinding="this"}}
+  {{/each}}
+  </br>
+</ul>
+{{#if isNewVisible}}
+  {{view TroutrEmber.NewNoteView}}
+{{/if}}
+
+<div class="commands">
+  <a href='#' {{action "showNew"}}>New Note</a>  
+</div>

@@ -1,0 +1,11 @@
+<h3>Make a new note!</h3>
+{{#with note}}
+  {{view Ember.TextField valueBinding="title" placeholder="Title"}}
+  </br>
+  {{view Ember.TextArea valueBinding="body" placeholder="Body"}}
+  </br>
+  <button type='submit'>
+    {{#if id}}Update{{else}}Create{{/if}}
+  </button>
+{{/with}}
+<a href='#' {{action "cancelForm"}}>Cancel</a>
